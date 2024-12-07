@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestionnaire de Tâches</title>
+    <link rel="stylesheet" href="Gtaches.css">
+</head>
+<body>
+    <div id="todoApp" class="container">
+        <div class="todo-header">
+            <h1>Gestionnaire de Tâches</h1>
+            <div class="todo-stats">
+                <span>Total: <span id="totalTasks">0</span></span>
+                <span>Terminées: <span id="completedTasks">0</span></span>
+            </div>
+        </div>
+        
+        <div class="todo-input">
+            <input type="text" id="todoInput" placeholder="Entrez une nouvelle tâche">
+            <button id="addTodo">Ajouter</button>
+        </div>
+        
+        <ul id="todoList" class="todo-list"></ul>
+        
+        <a href="index.html" id="backButton">Retour à la Présentation</a>
+    </div>
+
+    <script src="Gtaches.js"></script>
+</body>
+</html>
