@@ -4,7 +4,6 @@ const addTodoBtn = document.getElementById('addTodo');
 const todoList = document.getElementById('todoList');
 const totalTasksSpan = document.getElementById('totalTasks');
 const completedTasksSpan = document.getElementById('completedTasks');
-
 let tasks = [];
 
 // Ajouter une tâche
@@ -36,6 +35,16 @@ function deleteTask(id) {
     renderTasks();
 }
 
+// Supprimer toutes les tâches
+function deleteAllTasks() {
+    // Confirmation avant de supprimer toutes les tâches
+    const confirmDelete = confirm('Voulez-vous vraiment supprimer toutes les tâches ?');
+    if (confirmDelete) {
+        tasks = []; // Vide le tableau de tâches
+        renderTasks();
+    }
+}
+
 // Afficher les tâches
 function renderTasks() {
     todoList.innerHTML = '';
@@ -53,7 +62,6 @@ function renderTasks() {
         `;
         todoList.appendChild(li);
     });
-
     // Mettre à jour les statistiques
     totalTasksSpan.textContent = tasks.length;
     completedTasksSpan.textContent = tasks.filter(task => task.completed).length;
